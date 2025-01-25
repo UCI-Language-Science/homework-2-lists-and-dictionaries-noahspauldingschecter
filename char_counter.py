@@ -25,9 +25,14 @@
 # code should work for arbitrary strings, including the empty string.
 
 def char_counter():
-    # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
+    print('Please input a sequence:')
+    input_str = input()
+    lower_input_str = input_str.lower()
+    char_counts = {}
+    for char in lower_input_str:
+        char_counts[char] = char_counts.get(char, 0) + 1
+    print(char_counts)
+    
 
 if __name__ == "__main__":
     char_counter()

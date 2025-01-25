@@ -21,9 +21,25 @@
 # sum(<list>)
 
 def temperature_calculator():
-    # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
+    
+    temp_list = []
+    raw_value = input('Please input a temperature: ')
+    value = raw_value.lower()
+    while True:
+        if value != 'quit':
+            float_value = float(value)
+            temp_list.append(float_value)
+            temp_list_average = sum(temp_list) / len(temp_list)
+            raw_value = input(f'Your average temperature is {temp_list_average}. Please input another temperature or type "Quit" if you are done: ')
+            value = raw_value.lower()
+        else:
+            print('Goodbye.')
+            break
+
+        
+
+
+
 
 if __name__ == "__main__":
     temperature_calculator()

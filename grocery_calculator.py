@@ -28,9 +28,29 @@
 # Your total grocery bill is $7
 
 def grocery_calculator():
-    # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
+    grocery_prices = {
+        'bread': 3,
+        'eggs': 6,
+        'milk': 4,
+        'butter': 2
+    }
+
+    current_cost = 0
+    while True:
+        raw_item = input('Please input an item: ')
+        item = raw_item.lower()
+        if item != '':
+            item_cost = grocery_prices.get(item, 0)
+            if item_cost == 0:
+                print('The store doesn\'t have that.')
+            else:
+                current_cost += item_cost
+        else:
+            print (f'Your total cost is: ${current_cost}')
+            break
+                  
+
+    
 
 if __name__ == "__main__":
     grocery_calculator()
