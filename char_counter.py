@@ -26,8 +26,7 @@
 
 def char_counter():
     print('Please input a sequence:')
-    input_str = input()
-    lower_input_str = input_str.lower()
+    lower_input_str = input()
     char_counts = {}
     for char in lower_input_str:
         char_counts[char] = char_counts.get(char, 0) + 1
