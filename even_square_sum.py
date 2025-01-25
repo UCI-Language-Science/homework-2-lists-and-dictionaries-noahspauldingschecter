@@ -10,8 +10,13 @@
 #
 def even_square_sum():
     numbers = [1, 62, 3, 57, 26, 8, 101, 200, 43, 20, 11]
+    even_squares = []
 
-    # YOUR CODE GOES HERE
-
+    for num in numbers:
+        if (num % 2) == 0:
+            even_squares.append(num**2)
+    final_sum = sum(even_squares)
+    print(final_sum)
+    
 if __name__ == "__main__":
     even_square_sum()
